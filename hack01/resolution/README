@@ -1,0 +1,3 @@
+To resolve the exercise just run "make" on this directory
+
+It will compile the .c file and will preload the .so symbol on the docrypt file
