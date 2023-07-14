@@ -19,5 +19,6 @@ O comando irá automaticamente compilar o arquivo preload.c e carregar o simbolo
 Depois de rodado, podemos colocar qualquer credencial, não seremos barrados pela autenticação. Falta então descobrir qual é a chave de encriptação.
 
 Abrindo o binario do arquivo encrypt, podemos perceber uma variável chamada `encrypt_key` na seção .rodata, se jogarmos o código em ferramentas como o IDA, ele irá nos mostrar que o valor estático dessa variável é “easy”
+
 Tambem podemos simplesmente olhar no código hexadecimal e ver qual é o valor da variavel
 
