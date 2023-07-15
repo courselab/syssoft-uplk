@@ -1,3 +1,5 @@
 To resolve the exercise just run "make" on this directory
 
 It will compile the .c file and will preload the .so symbol on the docrypt file
+
+It will also put the output into the file "answer.out"
