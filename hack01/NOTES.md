@@ -11,7 +11,7 @@ podemos carregá la com o executável usando o seguinte comando:
 
 `LD_PRELOAD=$diretório/preload.so $diretorio/docrypt $diretorio/sample.cry
 
-ou somente rodar make run FILE=$<arquivo encriptado> KEY=$<chave de decriptação> no diretorio de resolution
+ou somente rodar make run FILE=$(arquivo encriptado) KEY=$(chave de decriptação) no diretorio de resolution
 
 O comando irá automaticamente compilar o arquivo preload.c e carregar o simbolo no arquivo docrypt antes de sua execução
 
