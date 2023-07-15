@@ -9,9 +9,9 @@ Investigando a biblioteca dinâmica libauth.so, podemos encontrar a função “
 Para fazer essa função podemos simplesmente programá-la em C e depois compilar para gerar um .so.
 podemos carregá la com o executável usando o seguinte comando: 
 
-`LD_PRELOAD=$diretório/preload.so $diretorio/docrypt $diretorio/sample.cry`
+`LD_PRELOAD=$diretório/preload.so $diretorio/docrypt $diretorio/sample.cry
 
-Recomendamos entrar no diretório `resolution` e rodar o comando `make`
+ou somente rodar make run FILE=<arquivo encriptado> KEY=<chave de decriptação> no diretorio de resolution
 
 O comando irá automaticamente compilar o arquivo preload.c e carregar o simbolo no arquivo docrypt antes de sua execução
 

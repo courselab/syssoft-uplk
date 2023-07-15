@@ -1,8 +1,27 @@
-run: preload.so
-	LD_PRELOAD=./preload.so ../docrypt ../sample.cry easy >> answer.out
+CC := gcc
+
+SRC_F := preload.c
+OBJ := preload.o
+SHRD_LIB := preload.so
 
 
-preload.so:
-	gcc -m32 -c -fPIC preload.c -o preload.o
-	gcc -m32 -shared -o preload.so preload.o
+
+
+OUTPUT := answer.out
+
+
+
+
+
+run: $(SHRD_LIB)
+	LD_PRELOAD=$(shell pwd)/$(SHRD_LIB) ../docrypt $(FILE) $(KEY)
+
+
+$(OBJ): $(SRC_F)
+	$(CC) -m32 -c -fPIC $(SRC_F) -o $(OBJ)
+
+
+
+$(SHRD_LIB): $(OBJ)
+	$(CC) -m32 -shared -o $(SHRD_LIB) $(OBJ)
 
